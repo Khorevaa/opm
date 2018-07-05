@@ -16,6 +16,8 @@ before_install:
   - wget -O os.deb http://oscript.io/downloads/night-build/deb
   - sudo dpkg -i os.deb; sudo apt install -f
   - oscript
+  - sudo opm install 1testrunner
+  - sudo opm install 1bdd
 
 install: 
   - sudo oscript /usr/share/oscript/lib/opm/src/opm.os install -l

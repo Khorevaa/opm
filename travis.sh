@@ -3,7 +3,7 @@ set -e
 
 opm run coverage
 
-temp=`cat src/Модули/КонстантыOpm.os | grep "ВерсияПродукта = " | sed 's|[^"]*"||' | sed -r 's/".+//'`
+temp=`cat src/core/Модули/КонстантыOpm.os | grep "ВерсияПродукта = " | sed 's|[^"]*"||' | sed -r 's/".+//'`
 version=${temp##*|}
 
 if [ "$TRAVIS_SECURE_ENV_VARS" == "true" ]; then
